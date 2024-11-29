@@ -313,7 +313,21 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
     md_name = os.path.join(
         dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
     )
+    meta_info = """---
+                    title: {title}
+                    categories:
+                    - {categories}
+                    date: {date}
+                    ---
+                """
+    title = issue.title
+    date = issue.created_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+    categories = ""
+    for label in issue.labels:
+        categories += f"- {label.name}\n"
+
     with open(md_name, "w") as f:
+        f.write(meta_info.format(title=title, categories=categories, date=date))
         f.write(f"# [{issue.title}]({issue.html_url})\n\n")
         f.write(issue.body or "")
         if issue.comments:
