@@ -314,14 +314,14 @@ def save_issue(issue, me, dir_name=BACKUP_DIR):
         dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
     )
     meta_info = """---
-                    title: {title}
-                    categories:
-                    - {categories}
-                    date: {date}
-                    ---
+title: {title}
+categories:
+{categories}
+date: {date}
+---
                 """
     title = issue.title
-    date = issue.created_at.strftime("%Y-%m-%dT%H:%M:%SZ")
+    date = issue.created_at.strftime("%Y-%m-%d")
     categories = ""
     for label in issue.labels:
         categories += f"- {label.name}\n"
