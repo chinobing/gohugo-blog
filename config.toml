@@ -1,73 +1,32 @@
-baseurl = "https://example.com"
+baseURL = "https://example.com"
 languageCode = "en-us"
-title = "Hugo Tania"
-theme = "hugo-tania"
-paginate = 6
+title = "Example YinYong Blog"
+theme = "yinyang"
+DefaultContentLanguage = "en"
 
-disqusShortname = "https-hugo-tania-netlify-app"
+[author]
+  name = "Joway Wang"
+  homepage = "https://joway.io/"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+  [languages.cn]
+    contentDir = "content/post"
+    languageName = "Chinese"
+    weight = 1
 
 [params]
-  # Emoji will show before the blog title on site navbar.
-  titleEmoji  = "😎"
+disqus = "joway" # disqus account name
+extraHead = ''
+mainSections = ["posts"]
 
-  # Logo will show before the blog title on site navbar.
-  titleLogo = ""
+[[params.socials]]
+name = "RSS"
+link = "/index.xml"
 
-  # Enable float footnotes.
-  # Default to true
-  enableFootnotes = true
-
-  siteName = "Hugo Tania is Amazing"
-  siteDesc = "Hugo is Absurdly Fast!"
-  author = "Hugo Tania"
-
-  [params.colorScheme]
-    # Enable toggle colorScheme
-    # Default to true
-    toggle = true
-    # Default colorScheme
-    # Default to auto
-    default = "auto"
-
-  # Limit how many categories filter show above search input.
-  # Default to 5
-  maxCategoryToShow = 10
-
-  # Show your social information with icon on index bio with `_index.md` content.
-  [params.socialOptions]
-    dev-to = ""
-    email = ""
-    facebook = ""
-    github = ""
-    instagram = ""
-    linkedin = ""
-    medium = ""
-    stack-overflow = ""
-    steam = ""
-    telegram = ""
-    twitter = ""
-    twitch = ""
-    whatsapp = ""
-  
-  # Comments settigns
-  [params.comments]
-    enabled = true
-    provider = "disqus"
-
-[menu]
-[[menu.header]]
-  name = "Articles"
-  url = "/articles/"
-[[menu.footer]]
-    name = "RSS"
-    url = "/index.xml"
-
-[markup]
-[markup.highlight]
-  noClasses = false
-  lineNos = true
-[markup.goldmark.renderer]
-  unsafe = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+[[params.socials]]
+name = "About"
+link = "https://joway.io"
