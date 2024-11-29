@@ -319,7 +319,8 @@ categories:
 {categories}
 date: {date}
 ---
-                """
+
+"""
     title = issue.title
     date = issue.created_at.strftime("%Y-%m-%d")
     categories = ""
