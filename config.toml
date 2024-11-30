@@ -19,6 +19,7 @@ DefaultContentLanguage = "cn"
     weight = 1
 
 [params]
+headTitle = "Chino Bing"
 disqus = "" # disqus account name
 extraHead = ''
 mainSections = ["posts"]
