@@ -28,5 +28,8 @@ name = "RSS"
 link = "/index.xml"
 
 [[params.socials]]
-name = "About"
+name = "About Me"
+link = "https://blog.f10.org/posts/1_%E5%85%B3%E4%BA%8E/"
+[[params.socials]]
+name = "Github"
 link = "https://github.com/chinobing"
