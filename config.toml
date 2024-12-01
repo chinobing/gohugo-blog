@@ -20,6 +20,7 @@ DefaultContentLanguage = "cn"
 
 [params]
 headTitle = "Chino Bing"
+Description = "The best it yet to come."
 disqus = "" # disqus account name
 extraHead = ''
 mainSections = ["posts"]
