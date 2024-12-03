@@ -25,6 +25,21 @@ disqus = "" # disqus account name
 extraHead = ''
 mainSections = ["posts"]
 
+[params.giscus]
+repo = "chinobing/chinobing.github.io"
+repoID = "R_kgDONWX1gw"
+category = "Announcements"
+categoryID = "DIC_kwDONWX1g84Ckyj5"
+mapping = "og:title"
+data-strict="0"
+reactionsEnabled = "1"
+emitMetadata = "0"
+inputPosition = "bottom"
+theme = "light"
+lang = "zh-CN"
+loading = "lazy"
+
+
 [[params.socials]]
 name = "RSS"
 link = "/index.xml"
