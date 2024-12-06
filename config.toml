@@ -1,12 +1,12 @@
 baseURL = "https://blog.f10.org"
 languageCode = "en-us"
 title = "ChinoBing's Blog"
-theme = "yinyang"
+theme = ["hugo-admonitions", "yinyang"
 DefaultContentLanguage = "cn"
 
-[author]
-  name = "ChinoBing"
-  homepage = "https://github.com/chinobing/"
+#[author]
+#  name = "ChinoBing"
+#  homepage = "https://github.com/chinobing/"
 
 [languages]
   # [languages.en]
@@ -24,6 +24,11 @@ Description = "The best is yet to come."
 disqus = "" # disqus account name
 extraHead = ''
 mainSections = ["posts"]
+
+# due to .Site.Author was deprecated in Hugo v0.124.0 and will be removed in a future release.
+[params.author]
+  name = "ChinoBing"
+  homepage = "https://github.com/chinobing/"
 
 [params.giscus]
 repo = "chinobing/chinobing.github.io"
