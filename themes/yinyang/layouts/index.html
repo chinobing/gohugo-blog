@@ -9,7 +9,7 @@
         {{ partial "header.html" . }}
         <div id="posts-list">
           {{ if .Site.Params.HomePageRotatePost }}
-            <div class="row posts-category rotating-list">
+            <div class="row rotating-list">
               {{ partial "rotating-list.html" . }}
             </div>
           {{ end }}
