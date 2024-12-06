@@ -1,4 +1,4 @@
-{{ with .Site.GetPage "/posts/17_Random.Picks.md" }}
+{{ with .Site.GetPage "{{ .Site.Params.HomePageRotatePost }}" }}
 {{ $content := .RawContent }}
 {{ $listItems := findRE `(?m)^[-*] (.+)$` $content }}
 <div id="rotating-item" class="rotating-content">

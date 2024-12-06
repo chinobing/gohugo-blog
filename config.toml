@@ -24,6 +24,7 @@ Description = "The best is yet to come."
 disqus = "" # disqus account name
 extraHead = ''
 mainSections = ["posts"]
+HomePageRotatePost = "/posts/17_Random.Picks.md"
 
 # due to .Site.Author was deprecated in Hugo v0.124.0 and will be removed in a future release.
 [params.author]
