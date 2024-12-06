@@ -1,0 +1,28 @@
+.rotating-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+    min-height: 100px;
+    transition: opacity 0.5s ease-in-out;
+    color: #666;
+    opacity: 0.2; 
+  }
+
+.rotating-content a {
+  all: unset;
+}
+
+.rotating-content:hover {
+    opacity: 1; /* 悬停时的透明度 */
+}
+.list-item {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  
+.rotating-list {
+    font-size: 2.0rem;
+    margin: 12px 0;
+  }

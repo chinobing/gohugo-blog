@@ -1,0 +1,11 @@
+{{ with .Site.GetPage "/posts/Random.Picks.md" }}
+{{ $content := .RawContent }}
+{{ $listItems := findRE `(?m)^[-*] (.+)$` $content }}
+<div id="rotating-item" class="rotating-content">
+  {{ range $index, $item := $listItems }}
+    <div class="list-item" data-index="{{ $index }}">
+      <a href="./posts/17_random.picks/">{{ . | replaceRE `^[-*] ` "" | safeHTML }}</a>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

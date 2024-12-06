@@ -26,3 +26,31 @@
 {{ if .Store.Get "hasMarkmap" }}
   <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"></script>
 {{ end }}
+
+{{- if .IsHome -}}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.list-item');
+    let currentIndex = 0;
+  
+    function showNextItem() {
+      // Hide all items
+      items.forEach(item => item.style.display = 'none');
+      
+      // Show current item
+      items[currentIndex].style.display = 'block';
+      
+      // Update index
+      currentIndex = (currentIndex + 1) % items.length;
+    }
+  
+    // Show first item immediately
+    showNextItem();
+    
+    // Rotate items every 5 seconds
+    setInterval(showNextItem, 5000);
+  });
+  
+  
+  </script>
+  {{ end }}
