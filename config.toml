@@ -1,7 +1,7 @@
 baseURL = "https://blog.f10.org"
 languageCode = "en-us"
 title = "ChinoBing's Blog"
-theme = ["hugo-admonitions", "yinyang"
+theme = ["hugo-admonitions", "yinyang"]
 DefaultContentLanguage = "cn"
 
 #[author]
