@@ -32,25 +32,33 @@
     document.addEventListener('DOMContentLoaded', function() {
       const items = document.querySelectorAll('.list-item');
       let currentIndex = 0;
-    
-      function showNextItem() {
+      let lastIndex = -1;
+
+      function getRandomIndex(max, exclude) {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * max);
+        } while (newIndex === exclude);
+        return newIndex;
+      }
+
+      function showRandomItem() {
         // Hide all items
         items.forEach(item => item.style.display = 'none');
         
-        // Show current item
-        items[currentIndex].style.display = 'block';
+        // Get random index (different from last shown)
+        currentIndex = getRandomIndex(items.length, lastIndex);
+        lastIndex = currentIndex;
         
-        // Update index
-        currentIndex = (currentIndex + 1) % items.length;
+        // Show random item
+        items[currentIndex].style.display = 'block';
       }
-    
+
       // Show first item immediately
-      showNextItem();
+      showRandomItem();
       
       // Rotate items every 5 seconds
-      setInterval(showNextItem, 5000);
+      setInterval(showRandomItem, 5000);
     });
-    
-    
-    </script>
+  </script>
   {{ end }}
