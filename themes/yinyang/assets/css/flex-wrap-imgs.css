@@ -1,0 +1,28 @@
+    /* Style for individual images */
+    .post-content img {
+      all: unset;
+      max-width: 100%; /* Ensure images don't overflow their container */
+      height: auto; /* Maintain aspect ratio */
+      border: 2px solid #333; /* Optional: Add a border */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter: gray;
+      transition-property: filter, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+    }
+
+    .post-content img:hover{
+        filter: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 800px) {
+      .post-content {
+        flex-direction: column; /* Stack images vertically on small screens */
+      }
+    }

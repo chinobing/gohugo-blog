@@ -58,7 +58,26 @@
       showRandomItem();
       
       // Rotate items every 10 seconds
-      setInterval(showRandomItem, 10000);s
+      setInterval(showRandomItem, 10000);
     });
   </script>
-  {{ end }}
+{{ end }}
+
+{{ if in .Params.categories "Travel" }}
+  <script>
+    // Get all images in the container
+    const images = document.querySelectorAll('.post-content img');
+
+    // Loop through the images and assign random widths
+    images.forEach(img => {
+      // Generate random width (between 100px and 300px)
+      const randomWidth = Math.floor(Math.random() * 201) + 200; // 100-300px
+
+      // Set the width of the image
+      img.style.width = `${randomWidth}px`;
+
+      // Ensure the height adjusts automatically to maintain the aspect ratio
+      img.style.height = 'auto';
+    });
+  </script>
+{{ end }}
