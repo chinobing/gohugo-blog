@@ -27,6 +27,12 @@ mainSections = ["posts"]
 HomePageRotatePost = "/posts/17_Random.Picks.md"
 lazyImage = 'true'
 
+# execute CSS for Posts or Pages only
+isPostPageCSSFiles = ["css/footnotes.css","css/auto-number-headings.css"]
+
+# execute CSS for HomePage only
+isHomeCSSFiles = ["css/rotating-list.css"]
+
 # due to .Site.Author was deprecated in Hugo v0.124.0 and will be removed in a future release.
 [params.author]
   name = "ChinoBing"

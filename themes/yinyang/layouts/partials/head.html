@@ -53,22 +53,26 @@
       <style>{{ .Content | safeCSS }}</style>
     {{ end }}
   {{ end }}
-  
-  {{- if .IsHome -}}
-    {{ with resources.Get "css/rotating-list.css" | minify }}
-      <style>{{ .Content | safeCSS }}</style>
+
+  {{ if .IsHome }}
+    {{ range .Site.Params.isHomeCSSFiles }}
+      {{ with resources.Get . | minify }}
+        <style>{{ .Content | safeCSS }}</style>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{if (and .IsPage (eq .Section "posts")) }}
+    {{ range .Site.Params.isPostPageCSSFiles }}
+      {{ with resources.Get . | minify }}
+        <style>{{ .Content | safeCSS }}</style>
+      {{ end }}
     {{ end }}
   {{ end }}
   
-  {{if (and .IsPage (eq .Section "posts")) }}
-    {{ with resources.Get "css/footnotes.css" | minify }}
-    <style>{{ .Content | safeCSS }}</style>
-    {{ end }}
-  {{end}}
-
-  {{ range .Site.Params.extraCSSFiles -}}
+  {{ range .Site.Params.extraCSSFiles }}
   <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
-  {{- end }}
+  {{ end }}
 
   <link href="{{ .Site.Params.staticPrefix }}{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml"
     title="{{ .Site.Title }}">

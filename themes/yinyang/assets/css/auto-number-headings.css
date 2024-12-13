@@ -1,0 +1,29 @@
+/* Reset counters for headings */
+body {
+    counter-reset: h1 h2 h3;
+}
+  
+/* Chinese numbering for h1 */
+.post-content h1:before {
+content: counter(h1, cjk-decimal) "、";
+counter-increment: h1;
+}
+
+/* Parenthesized numbering for h2 */
+.post-content h2:before {
+content: "（" counter(h2, decimal) "）";
+counter-increment: h2;
+counter-reset: h3; /* Reset h3 counter for each h2 */
+}
+
+/* Decimal numbering for h3 */
+.post-content h3:before {
+content: counter(h2, decimal) "." counter(h3, decimal) ". ";
+counter-increment: h3;
+}
+
+/* Disable numbering for headings with .nocount class */
+h1.nocount:before, h2.nocount:before, h3.nocount:before {
+content: "";
+counter-increment: none;
+}
