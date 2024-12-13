@@ -78,6 +78,8 @@
 
       // Ensure the height adjusts automatically to maintain the aspect ratio
       img.style.height = 'auto';
+
+      img.setAttribute('loading', 'lazy');
     });
   </script>
 {{ end }}
