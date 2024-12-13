@@ -5,6 +5,6 @@
 
 
 ## Thanks to
--  [WingLim/hugo-tania](https://github.com/WingLim/hugo-tania) for float footnotes.
--  [涸河 - 不尽长江滚滚流](https://hh.ee/) for color-filter.
+- [WingLim/hugo-tania](https://github.com/WingLim/hugo-tania) for float footnotes.
+- [涸河 - 不尽长江滚滚流](https://hh.ee/) for color-filter.
 - DeepSeek for auto-number-headings.css.
