@@ -66,3 +66,6 @@ name = "Travel"
 [[params.socials]]
 name = "Github"
 link = "https://github.com/chinobing"
+
+[markup.goldmark.renderer]
+unsafe = true
