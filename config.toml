@@ -28,7 +28,7 @@ HomePageRotatePost = "/posts/17_Random.Picks.md"
 lazyImage = 'true'
 
 # execute CSS for Posts or Pages only
-isPostPageCSSFiles = ["css/footnotes.css","css/auto-number-headings.css"]
+isPostPageCSSFiles = ["css/footnotes.css", "css/auto-number-headings.css", "css/big-blockquote.css"]
 
 # execute CSS for HomePage only
 isHomeCSSFiles = ["css/rotating-list.css"]

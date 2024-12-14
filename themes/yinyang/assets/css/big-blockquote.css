@@ -1,0 +1,44 @@
+
+/* Container for the quotation */
+.markdown-body blockquote{
+    border-left: none !important;
+    position: relative;
+    padding: 20px;
+    /* font-family: Georgia, serif; */
+    font-size: 20px;
+    color: #730000;
+    line-height: 1.6;
+    /* max-width: 600px;
+    margin: 0 auto; */
+}
+
+/* Big opening quotation mark */
+.markdown-body blockquote::before {
+    content: "“"; /* Opening quotation mark */
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 100px; /* Adjust size as needed */
+    font-family: Georgia, serif;
+    color: #ccc; /* Light gray color */
+    line-height: 1;
+}
+
+/* Big closing quotation mark */
+.markdown-body blockquote::after {
+    content: "”"; /* Closing quotation mark */
+    position: absolute;
+    bottom: -40px;
+    right: -20px;
+    font-size: 100px; /* Adjust size as needed */
+    font-family: Georgia, serif;
+    color: #ccc; /* Light gray color */
+    line-height: 1;
+}
+
+/* Style for the quote text */
+blockquote p{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
