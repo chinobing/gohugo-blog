@@ -84,6 +84,19 @@
   </script>
 {{ end }}
 
+{{ if .Site.Params.ImageProxy }}
+<script>
+  // Get all images in the container
+  const pimages = document.querySelectorAll('.post-content img');
+  pimages.forEach(img => {
+    // Get the current src attribute
+    const currentSrc = img.getAttribute('src');
+    // Modify the src attribute to include the prefix
+    img.setAttribute('src', {{ .Site.Params.ImageProxy }} + currentSrc);
+  });
+</script>
+{{ end }}
+
 {{if (and .IsPage (eq .Section "posts")) }}
   <script>
   // Function to remove an element

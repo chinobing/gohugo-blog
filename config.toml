@@ -27,6 +27,9 @@ mainSections = ["posts"]
 HomePageRotatePost = "/posts/17_Random.Picks.md"
 lazyImage = 'true'
 
+# https://github.com/willnorris/imageproxy
+ImageProxy = 'https://imageproxy.f10.org/x0.75/'
+
 # execute CSS for Posts or Pages only
 isPostPageCSSFiles = ["css/footnotes.css", "css/auto-number-headings.css", "css/big-blockquote.css", "css/posts-custom.css"]
 
