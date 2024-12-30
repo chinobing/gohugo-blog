@@ -5,3 +5,34 @@ mark {
 p code {
     background: #dbce9666!important;
 }
+
+/* .toc */
+.toc {
+    margin: 0 2px 40px;
+    border: 1px solid rgb(238, 238, 238);
+    background: rgb(245, 245, 245);
+    border-radius: 8px;
+    padding: .4em;
+}
+
+.toc .inner {
+    margin: 5px 20px 0;
+    padding: 0 10px;
+    opacity: .9;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.toc details summary {
+    cursor: zoom-in;
+    margin-inline-start: 10px;
+    user-select: none;
+}
+
+.toc ul {
+    padding: 0;
+}
+
+.toc li ul {
+    margin-inline-start: 24px;
+}
