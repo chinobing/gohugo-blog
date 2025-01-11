@@ -62,7 +62,10 @@ link = "/index.xml"
 
 [[params.socials]]
 name = "About Me"
-link = "https://blog.f10.org/posts/1_%E5%85%B3%E4%BA%8E/"
+link = "/posts/1_%E5%85%B3%E4%BA%8E/"
+[[params.socials]]
+link = "/posts/28_amuse.myself/"
+name = "Amuse"
 [[params.socials]]
 link = "/categories/travel"
 name = "Travel"
